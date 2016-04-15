@@ -1,21 +1,62 @@
+// Variables and Mixins
+$green: #3f7150;
+@mixin bold {
+   font-weight: 700;
+}
+@mixin light {
+   font-weight: 300;
+}
+
+// GLOBAL
 * {
+   font-family: 'Merriweather', serif;
    margin: 0;
    padding: 0;
-   text-decoration: none;
-   font-family: 'Roboto', sans-serif;
-   // font-family: 'Vollkorn', serif;
-}
-// font-family: 'Vollkorn', serif;
-h1, h2, h3 {
-   font-family: 'Vollkorn', serif;
-   // font-family: 'Roboto', sans-serif;
+   list-style-type: none;
 }
 
 .container {
-   width: 90%;
+   width: 85%;
    margin: 0 auto;
 }
 
-.bold {
-   font-weight: bold;
+.section-title {
+   color: white;
+   font-weight: 700;
+   font-size: 5em;
 }
+
+// Heading
+.title {
+   border: 5% solid $green;
+   min-height: 600px;
+   padding-top: 5%;
+   @include bold;
+
+   .title-name {
+      width: 80%;
+      font-size: 6em;
+      line-height: 1.25em;
+   }
+   .title-rest {
+      width: 70%;
+      margin-top: 2%;
+      font-size: 2em;
+      line-height: 2.0em;
+      font-weight: 400;
+   }
+   .title-love {  
+      margin-top: 2%;
+      margin-bottom: 7%;
+      font-size: 2em;
+   }
+}
+
+// About Me
+.about {
+   padding-top: 10%;
+   border-top: 25px solid darken($green, 5%);
+   min-height: 700px;
+   background-color: #3f7150;
+}
+

@@ -1,0 +1,42 @@
+* {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.container {
+  width: 85%;
+  margin: 0 auto; }
+
+.section-title {
+  color: white;
+  font-weight: 700;
+  font-size: 5em; }
+
+.title {
+  border: 5% solid #3f7150;
+  min-height: 600px;
+  padding-top: 5%;
+  font-weight: 700; }
+  .title .title-name {
+    width: 80%;
+    font-size: 6em;
+    line-height: 1.25em; }
+  .title .title-rest {
+    width: 70%;
+    margin-top: 2%;
+    font-size: 2em;
+    line-height: 2.0em;
+    font-weight: 400; }
+  .title .title-love {
+    margin-top: 2%;
+    margin-bottom: 7%;
+    font-size: 2em; }
+
+.about {
+  padding-top: 10%;
+  border-top: 25px solid #366144;
+  min-height: 700px;
+  background-color: #3f7150; }
+
+/*# sourceMappingURL=style.css.map */
