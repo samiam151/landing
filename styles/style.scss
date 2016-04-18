@@ -1,6 +1,8 @@
 // Variables and Mixins
 $green: #3f7150;
 $red: #772522;
+$blue: #182244;
+$dark_green: #012607;
 
 @mixin bold {
    font-weight: 700;
@@ -9,8 +11,8 @@ $red: #772522;
    font-weight: 300;
 }
 @mixin section($color) {
-   border-top: 20px solid darken($color, 2%);
-   background-color: $color;
+   // border-top: 20px solid darken($color, 2%);
+   // background-color: $color;
 }
 
 // GLOBAL
@@ -21,14 +23,32 @@ $red: #772522;
    list-style-type: none;
 }
 
+html {
+   background-color: #000;
+}
+
+body {
+   border: 15px solid #000;
+   background-color: #FFF;
+}
+
+.picture {
+   // background-image: linear-gradient(to left, rgba(0,0,0,0) 10%, rgba(0,0,0, 0.7)), url('../assets/ns_bg_trans.jpg');
+   
+   background-image: url('../assets/ns_bg_trans.jpg');
+
+   background-size: 100%;
+   background-repeat: no-repeat;
+   display: fixed;
+}
+
 .container {
    width: 85%;
    margin: 0 auto;
 }
 
-.section {
-   display: absolute;
-   top: 0;
+a {
+   text-decoration: none;
 }
 
 .section-title {
@@ -40,6 +60,19 @@ $red: #772522;
 // Heading
 .title {
    @include bold;
+   color: white;
+   background: rgba(24, 34, 68, 0.6);
+
+  //  &:before {
+  //   content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+  //     opacity: .6; 
+  // }
 
    .title-name {
       width: 80%;
@@ -63,16 +96,16 @@ $red: #772522;
 
 // About Me
 .about {
-   @include section($green);
+   @include section(#fff);
 }
 
 .work {
-   @include section($red);
+   @include section(#fff);
    h2 {
       font-size: 3em;
    }
    .work-block {
-      padding: 2% 0;
+      padding: 3% 0;
    }
 }
 

@@ -11,35 +11,38 @@
    <script type='text/javascript' src='scripts/libs/angular-ui-router.js'></script>
 </head>
 <body>   
-   
-   <!-- Header -->
-   <section class='container'>
-       <div class='title'>
-         <p class='title-name'>I'm <br>Nick Sam.</p>
-         <p class='title-rest'>I make front end interfaces, data visualizations, and other niceties.</p>
-         <p class='title-love'>And I love doing it.</p>
-      </div>
-   </section>
-
+   <div class="picture">
+      <!-- Header -->
+      <section class='title'>
+          <div class='container'>
+            <p class='title-name'>I'm <br>Nick Sam.</p>
+            <p class='title-rest'>I make front end interfaces, data visualizations, and other niceties.</p>
+            <p class='title-love'>And I love doing it.</p>
+         </div>
+      </section>
+   </div>
    <!-- About Me Section-->
    <section class="about">
-      <div class="container">
-         <!-- <h2 class='section-title'>About Me</h2> -->
-         
-      </div>
+    <div class="container">
+       <!-- <h2 class='section-title'>About Me</h2> -->
+       
+    </div>
    </section>
-   
+
    <!-- Work / Experience Section -->
    <section ng-controller='WorkCtrl as workctrl' class="work">
-      <div class="container">
-        <li ng-repeat='experience in workctrl.experiences.works'>
-            <div class="work-block">
-               <h2 ng-bind=experience.header></h2>
-               <p ng-bind=experience.skills></p>
-            </div>  
-         </li>
-      </div>
+    <div class="container">
+      <li ng-repeat='experience in workctrl.experiences.works'>
+          <div class="work-block">
+             <h2 ng-bind=experience.header></h2>
+             <p ng-bind=experience.brief></p>
+             <p ng-bind=experience.skills></p>
+             <a ng-href={{experience.url}} ng-bind=experience.url target='_blank'></a>
+          </div>  
+       </li>
+    </div>
    </section>
+    
 
    <!-- scripts -->
    <script type="text/javascript" src="scripts/app.js"></script>
