@@ -6,33 +6,43 @@
    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'>
    <link href='https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer' rel='stylesheet' type='text/css'>
    <link rel="stylesheet" href="styles/style.css">
-   <!-- <script type='text/javascript' src="scripts/libs/jquery-1.12.3.min.js"></script>
+   <script type='text/javascript' src="scripts/libs/jquery-1.12.3.min.js"></script>
    <script type='text/javascript' src='scripts/libs/angular.min.js'></script>
-   <script type='text/javascript' src='scripts/libs/angular-ui-router.js'></script> -->
+   <script type='text/javascript' src='scripts/libs/angular-ui-router.js'></script>
 </head>
 <body>   
    
    <!-- Header -->
-   <div class='container'>
+   <section class='container'>
        <div class='title'>
          <p class='title-name'>I'm <br>Nick Sam.</p>
          <p class='title-rest'>I make front end interfaces, data visualizations, and other niceties.</p>
          <p class='title-love'>And I love doing it.</p>
       </div>
-   </div>
+   </section>
 
-   <!-- About Me -->
-   <div class="about">
+   <!-- About Me Section-->
+   <section class="about">
       <div class="container">
          <!-- <h2 class='section-title'>About Me</h2> -->
          
       </div>
-   </div>
-
-
+   </section>
+   
+   <!-- Work / Experience Section -->
+   <section ng-controller='WorkCtrl as workctrl' class="work">
+      <div class="container">
+        <li ng-repeat='experience in workctrl.experiences.works'>
+            <div class="work-block">
+               <h2 ng-bind=experience.header></h2>
+               <p ng-bind=experience.skills></p>
+            </div>  
+         </li>
+      </div>
+   </section>
 
    <!-- scripts -->
-   <script type="text/javascript" src="app.js"></script>
+   <script type="text/javascript" src="scripts/app.js"></script>
 </body>
 
 </html>

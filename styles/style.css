@@ -8,20 +8,22 @@
   width: 85%;
   margin: 0 auto; }
 
+.section {
+  display: absolute;
+  top: 0; }
+
 .section-title {
   color: white;
   font-weight: 700;
   font-size: 5em; }
 
 .title {
-  border: 5% solid #3f7150;
-  min-height: 600px;
-  padding-top: 5%;
   font-weight: 700; }
   .title .title-name {
     width: 80%;
     font-size: 6em;
-    line-height: 1.25em; }
+    line-height: 1.25em;
+    padding-top: 7%; }
   .title .title-rest {
     width: 70%;
     margin-top: 2%;
@@ -34,9 +36,15 @@
     font-size: 2em; }
 
 .about {
-  padding-top: 10%;
-  border-top: 25px solid #366144;
-  min-height: 700px;
+  border-top: 20px solid #3b6a4b;
   background-color: #3f7150; }
+
+.work {
+  border-top: 20px solid #6f2320;
+  background-color: #772522; }
+  .work h2 {
+    font-size: 3em; }
+  .work .work-block {
+    padding: 2% 0; }
 
 /*# sourceMappingURL=style.css.map */

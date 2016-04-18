@@ -1,0 +1,51 @@
+Experience
+
+   + Front End Developer
+      Code for DC / 21st Century Schools
+      For Generations To Come Project 
+
+   - Created a web-based data visualization for DC City Council that shows modernization expenditures from FY1998 - 2021 for DC public and charter schools
+   - Communicated with the client about visualization requirements
+   - Worked with Designer to implement page and site-wide style
+   - Worked with Data Lead to 
+   - Created interactive bubble chart using D3 and Underscore
+   - Used jQuery to create the user interface for the visualization
+   - Used Python to import CSV and JSON files to create accesory JSON files required for additional, supporting charts
+
+   + Carpenter
+      Whiting-Turner Contracting Company
+
+   - Hired from Temp Agency, Promoted to Carpten   ter after two years 
+   - Provide direction from superindentent to sub-contractors on completing tasks
+   - Ensure that contruction site remains OSHA and E&S compliant for successful inspections
+
+   + Audio Engineer / Co-Owner and Founder
+      Sunbeam Music LLC
+
+   - Crafted brand-specific soundscapes and sound guides for clients, as well as background music for radio and television
+   - Educatated clients and prospects on our servicies and how it would impact their business
+   - Created website from scatch using HTML / SASS / JS, Web Audio API, and PHP
+   - Created additional marketing brochures, presentation materials, and demo reels to present to prosepctive clients
+   - Contracted musicians and studios to complete projects
+
+Skills
+
+   - HTML / SVG
+   - CSS / SASS / Bootstrap
+   - Javascript / D3 / Angular
+   - Javascript / jQuery / Underscore
+   - Git
+
+   - Python
+   - CoffeeScript
+
+Affiliations
+
+   - Code for DC
+   - Data Visualization DC
+   - AngularJS DC
+
+Education
+
+   - NOVA - AA Computer Science
+   - VCU - Bachelor of Music: Piano Performance

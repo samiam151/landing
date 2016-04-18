@@ -1,10 +1,16 @@
 // Variables and Mixins
 $green: #3f7150;
+$red: #772522;
+
 @mixin bold {
    font-weight: 700;
 }
 @mixin light {
    font-weight: 300;
+}
+@mixin section($color) {
+   border-top: 20px solid darken($color, 2%);
+   background-color: $color;
 }
 
 // GLOBAL
@@ -20,6 +26,11 @@ $green: #3f7150;
    margin: 0 auto;
 }
 
+.section {
+   display: absolute;
+   top: 0;
+}
+
 .section-title {
    color: white;
    font-weight: 700;
@@ -28,15 +39,13 @@ $green: #3f7150;
 
 // Heading
 .title {
-   border: 5% solid $green;
-   min-height: 600px;
-   padding-top: 5%;
    @include bold;
 
    .title-name {
       width: 80%;
       font-size: 6em;
       line-height: 1.25em;
+      padding-top: 7%;
    }
    .title-rest {
       width: 70%;
@@ -54,9 +63,16 @@ $green: #3f7150;
 
 // About Me
 .about {
-   padding-top: 10%;
-   border-top: 25px solid darken($green, 5%);
-   min-height: 700px;
-   background-color: #3f7150;
+   @include section($green);
+}
+
+.work {
+   @include section($red);
+   h2 {
+      font-size: 3em;
+   }
+   .work-block {
+      padding: 2% 0;
+   }
 }
 
