@@ -3,14 +3,11 @@
 <head>
    <meta charset="utf8">
    <title>Landing</title>
-<!--    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'>
-   <link href='https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer' rel='stylesheet' type='text/css'> -->
-   <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
    <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
    <link rel="stylesheet" href="styles/style.css">
-   <script type='text/javascript' src="scripts/libs/jquery-1.12.3.min.js"></script>
-   <script type='text/javascript' src='scripts/libs/angular.min.js'></script>
-   <script type='text/javascript' src='scripts/libs/angular-ui-router.js'></script>
+   
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script> -->
+   <!-- <script type='text/javascript' src='scripts/libs/angular-ui-router.js'></script> -->
 </head>
 
 <body>
@@ -19,9 +16,18 @@
    <div class="picture">
       <section class='home'>
          <div class='container'>
-            <p class='home-name'><br>Nick Sam.</p>
-            <p class='home-rest'>I make front end interfaces, data visualizations, and other niceties.</p>
-            <p class='home-love'>And I love doing it.</p>
+            <div class="home-cont">
+               <p class='home-name'><br>Nick Sam.</p>
+               <p class='home-rest'>I make front end interfaces, data visualizations, and other niceties. Check out my work below.</p>
+               <p class='home-rest'></p>
+               <p class='home-contact'>Feel free to contact me.</p>
+               
+               <div class="home-buttons">
+                  <a href="mailto:nick@nick-sam.com">Talk To Me!</a>
+                  <a href="https://github.com/samiam151">Check Out Github</a>
+               </div>
+               <!-- <p class='home-love'>And I love doing it.</p> -->
+            </div>
          </div>
       </section>
    </div>
@@ -64,6 +70,7 @@
       <ul class='workBlockUl'>
          <li ng-repeat='experience in work.experiences.works' 
              data-image={{experience.image}} 
+             data-length={{experience.worksLength()}} 
              work-block-hover>
             <div class="work-block">
                <div class="container">
@@ -78,6 +85,8 @@
    </section>
     
    <!-- scripts -->
+   <script type='text/javascript' src="scripts/libs/jquery-1.12.3.min.js"></script>
+   <script type='text/javascript' src='scripts/libs/angular.min.js'></script>
    <script type="text/javascript" src="scripts/app.js"></script>
    <script type="text/javascript" src="scripts/script.js"></script>
 </body>

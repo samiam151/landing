@@ -1,4 +1,11 @@
-var app = angular.module('app', ['ui.router']);
+var app = angular.module('app', []);
+
+/** ROUTES **/
+// app
+// .config(function($routeProvider){
+//    $routeProvider.when('/')
+// })
+// ;
 
 /** DIRECTIVES **/
 app
@@ -6,7 +13,6 @@ app
    return function(scope, el){
       var originalBackgroundColor = el.css('background-color'),
          originalColor = el.css('color');
-
       el.bind('mouseenter', function(){
          var image = $(this).data('image');
          el.css('background-image', 'url(' + image + ')');
@@ -18,7 +24,14 @@ app
       });
    }
 })
-;
+// .directive('fadeIn', function(){
+//    return function(scope,el, attrs){
+//       el.bind('click', function(){
+//          console.log('loaded');
+//       });
+//    };
+// })
+// ;
 
 /** CONTROLLERS **/
 app
@@ -44,6 +57,7 @@ app
 /** SERVICES **/
 app
 .service('experiences', function(){
+   var that = this;
    this.toString = 'The name of this service is "experiences".';
    this.works = [
       {
@@ -55,7 +69,7 @@ app
 
       },
       {
-         header: 'Interactive Piano',
+         header: 'Keyboard Piano',
          brief: 'Web Audio API Experiment',
          skills: 'HTML, SCSS, JAVASCRIPT, WEB AUDIO API',
          url: 'http://nick-sam.com/interactivePiano/',
@@ -78,6 +92,10 @@ app
          image: 'assets/screenshot_of_nova_energy.png'
 
       }
-   ];
+
+   ]; // header, brief, skills, url, image
+   this.worksLength = (function(){
+      return that.works.length;
+   }());
 })
 ;
