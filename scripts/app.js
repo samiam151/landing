@@ -1,16 +1,10 @@
 var app = angular.module('app', []);
 
-/** ROUTES **/
-// app
-// .config(function($routeProvider){
-//    $routeProvider.when('/')
-// })
-// ;
-
 /** DIRECTIVES **/
 app
 .directive('workBlockHover', function(){
-   return function(scope, el){
+   return function(scope, element){
+      var el = element;
       var originalBackgroundColor = el.css('background-color'),
          originalColor = el.css('color');
       el.bind('mouseenter', function(){
@@ -24,14 +18,42 @@ app
       });
    }
 })
-// .directive('fadeIn', function(){
-//    return function(scope,el, attrs){
-//       el.bind('click', function(){
-//          console.log('loaded');
-//       });
-//    };
-// })
-// ;
+.directive('pieChart', function(){
+   return {
+      restrict: 'E',
+      replace: true,
+      // template: '<p>Hello!!!!!!!</p>',
+      // transclude: true,
+      // scope: {},
+      link: function(scope, el, attrs){
+         var height = 100, width = 100;
+         var svg = d3.select(el[0]).append('svg')
+            .attr('height', height)
+            .attr('width', width);
+
+         var circle = svg.selectAll('circle')
+            // need to fix data problem // pull from controller
+            .data([50])
+            .enter()
+            .append('circle')
+            .attr('r', function(d,i){
+               return d;
+            })
+            .attr('cx', function(d,index){
+               return index * 50 + d;
+            })
+            .attr('cy', '50')
+            .style('fill', 'red');
+         var innerCircle = svg.append('circle')
+            .attr('r', '30')
+            .attr('cy', (height / 2))
+            .attr('cx', (width / 2))
+            .attr('fill', 'white')
+            ;
+      }
+   };
+})
+;
 
 /** CONTROLLERS **/
 app
@@ -41,7 +63,8 @@ app
       'Javascript',
       'D3 / Angular',
       'jQuery / Underscore',
-      'Git'
+      'Git',
+      'Python'
    ];
    this.clubs = [
       'Code for DC',
@@ -52,6 +75,11 @@ app
 .controller('WorkCtrl', ['experiences', function(experiences){
    this.experiences = experiences;
 }])
+.controller('PieCtrl', function(){
+   this.data = function(){
+      return [10,20,30,40,50];
+   };
+})
 ;
 
 /** SERVICES **/

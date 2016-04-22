@@ -1,8 +1,10 @@
 // Variables and Mixins
 $green: #3f7150;
 $red: #763432;//#843a38;//#772522;
-$blue: #2f3856;//#182244;
+$blue: #3f1896;//#182244;
 $dark_green: #012607;
+$black_transparent: rgba(50,0,0,0.5);
+$transparent: rgba(255,180,180,0.2);
 
 @mixin bold {
    font-weight: 700;
@@ -17,7 +19,6 @@ $dark_green: #012607;
 // GLOBAL
 * {
    font-family: 'Sanchez', serif;
-   // font-family: 'Arvo', serif;
    margin: 0;
    padding: 0;
    list-style-type: none;
@@ -27,17 +28,18 @@ $dark_green: #012607;
 }
 
 html {
-   background-color: #000;
+   // background-color: #000;
+   background-color: $red;
 }
 
 body {
-   // border: 20px solid #000;
+   // overflow: hidden;
    background-color: $red;
    color: white;
 }
 
 h2 {
-   font-size: 2.6em;
+   font-size: 2em;
 }
 
 h3 {
@@ -46,17 +48,26 @@ h3 {
 
 a {
    text-decoration: none;
+   color: white;
+
+   &:visited {
+      color: white;
+   }
+   &:hover {
+      color: white;
+   }
 }
 
 section {
-   border: 15px solid black;
+   // border: 15px solid black;
 }
 
 .picture {
    // background-image: url('../assets/ns_bg_trans.jpg');
    background-image: url('../assets/ns_bg_web.jpg');
 
-   background-size: 100%;
+   // background-size: 100%;
+   background-size: cover;
    background-repeat: no-repeat;
    display: fixed;
 }
@@ -76,27 +87,26 @@ section {
 // Heading
 .home {
    @include bold;
-   color: black;
-   background-color: rgba(200,126,123,0.3);
+   // color: black;
+   color: white;
+   // background-color: rgba(200,126,123,0.4);
+   // background-color: rgba(0,0,0,0.1);
+   background: linear-gradient(90deg, $black_transparent, $black_transparent 38%, $transparent);
 
    .home-cont {
-      // @include move-left;
 
       .home-name {
-         // width: 80%;
          font-size: 7em;
          line-height: 0.95em;
-         // font-weight: 700;
-         letter-spacing: -2px;
-
+         letter-spacing: 3px;
       }
       .home-rest {
          
          width: 60%;
          margin-top: 3%;
          font-size: 1.9em;
-         font-weight: 400;
-         letter-spacing: 1px;
+         font-weight: 600;
+         letter-spacing: 2px;
          line-height: 1.5em;
 
       }
@@ -106,19 +116,18 @@ section {
          font-size: 1.5em;
       }
       .home-buttons {
-         // display: inline-block;
          margin-top: 3%;
          
          a {
             background-color: rbga(0,0,0,0);
-            border: 3px solid black;
+            border: 3px solid white;
             border-radius: 20px;
             padding: 4px 15px;
             margin-right: 2%;
-            color: black;
 
             &:hover {
                color: #000;
+               transition: background-color 0.1s ease;
                background-color: lighten($red, 20%);
             }
          }
@@ -139,7 +148,7 @@ section {
    color: #000;
 
    .aboutCont{
-      margin-top: 12%;
+      padding: 12% 0;
 
       .bio {
          width: 70%;
@@ -160,7 +169,12 @@ section {
 .work {
    border-top: 3px solid black;
    .work-block {
-      padding: 1.7% 0;
+      padding: 2.5% 0;
    }
 }
+
+pie-chart {
+   margin-right: 200px;
+}
+
 

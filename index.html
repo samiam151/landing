@@ -17,7 +17,7 @@
       <section class='home'>
          <div class='container'>
             <div class="home-cont">
-               <p class='home-name'><br>Nick Sam.</p>
+               <p class='home-name'><br>Nicolas Sam.</p>
                <p class='home-rest'>I make front end interfaces, data visualizations, and other niceties. Check out my work below.</p>
                <p class='home-rest'></p>
                <p class='home-contact'>Feel free to contact me.</p>
@@ -35,9 +35,9 @@
    <!-- About Section-->
    <section ng-controller='AboutCtrl as about' class="about">
       <div class="container">
-         <!-- <h2 class='section-title'>About Me</h2> -->
+         
+         <!-- Little about me -->
          <div class="aboutCont">
-            <!-- Little about me -->
             <div class="bio">
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum illo eius suscipit, repellat ad. Voluptatum magni fuga quo illo dolorem ipsa, similique asperiores dolor ex et quod libero dolore accusantium?</p>
             </div>
@@ -61,7 +61,17 @@
                   </li>
                </ul>
             </div>
+
+            <!-- Charts -->
+            <div ng-controller='PieCtrl as pie'>
+               <pie-chart piedata={{pie.data}}></pie-chart>
+               <pie-chart piedata={{pie.data}}></pie-chart>
+               <pie-chart piedata={{pie.data}}></pie-chart>
+            </div>
          </div>
+
+         
+
       </div>
    </section>
 
@@ -86,6 +96,7 @@
     
    <!-- scripts -->
    <script type='text/javascript' src="scripts/libs/jquery-1.12.3.min.js"></script>
+   <script type='text/javascript' src="scripts/libs/d3.min.js"></script>
    <script type='text/javascript' src='scripts/libs/angular.min.js'></script>
    <script type="text/javascript" src="scripts/app.js"></script>
    <script type="text/javascript" src="scripts/script.js"></script>
