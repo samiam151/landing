@@ -1,7 +1,7 @@
 // Variables and Mixins
 $green: #3f7150;
 $red: #763432;//#843a38;//#772522;
-$blue: #3f1896;//#182244;
+$blue: rgba(26,46, 79, 1);
 $dark_green: #012607;
 $black_transparent: rgba(50,0,0,0.5);
 $transparent: rgba(255,180,180,0.2);
@@ -29,12 +29,12 @@ $transparent: rgba(255,180,180,0.2);
 
 html {
    // background-color: #000;
-   background-color: $red;
+   // background-color: $red;
 }
 
 body {
    // overflow: hidden;
-   background-color: $red;
+   // background-color: $red;
    color: white;
 }
 
@@ -100,8 +100,12 @@ section {
          line-height: 0.95em;
          letter-spacing: 3px;
       }
+      .home-job {
+         margin-top: 0.5%;
+         font-size: 1.9em;
+         // color: $blue;
+      }
       .home-rest {
-         
          width: 60%;
          margin-top: 3%;
          font-size: 1.9em;
@@ -169,7 +173,27 @@ section {
 .work {
    border-top: 3px solid black;
    .work-block {
-      padding: 2.5% 0;
+      padding: 3.5% 0;
+      
+      .cont {
+         position: relative;
+         -webkit-transition: all 0.25s ease-in-out;
+         transition: all 0.25s ease-in-out;
+         padding: 2%;
+         width: 55%;
+         border-radius: 5px;
+      }
+      .work-name {
+         font-size: 3em;
+      }
+      .work-brief {
+         margin-top: 0.6%;
+         font-size: 1.5em;
+      }
+      .work-skills {
+         margin-top: 1%;
+         font-size: 1em;
+      }
    }
 }
 
@@ -177,4 +201,9 @@ pie-chart {
    margin-right: 200px;
 }
 
-
+.blue {
+   background-color: $blue;
+}
+.darken {
+   background-color: darken($blue, 2%)
+}

@@ -4,18 +4,28 @@ var app = angular.module('app', []);
 app
 .directive('workBlockHover', function(){
    return function(scope, element){
-      var el = element;
-      var originalBackgroundColor = el.css('background-color'),
-         originalColor = el.css('color');
+      var el = element,
+         cont = $(el).children().children().children('.cont');
+      // var originalBackgroundColor = el.css('background-color'),
+      //    originalColor = el.css('color');
+      el.addClass('blue');
+
       el.bind('mouseenter', function(){
          var image = $(this).data('image');
          el.css('background-image', 'url(' + image + ')');
-         el.css('color', 'black');
+         el.addClass('darken');
+         cont.css('left', '30px');
+         cont.addClass('blue');
       });
+
        el.bind('mouseleave', function(){
          el.css('background-image', 'none');
-         el.css('color', originalColor);
+         el.removeClass('darken');
+         cont.css('left', '0px');
+         cont.removeClass('blue');
       });
+
+
    }
 })
 .directive('pieChart', function(){
@@ -107,7 +117,7 @@ app
       {
          header: 'Dinner List',
          brief: 'Angular Someting',
-         skills: 'HTML, SCSS, JAVASCRIPT, ANGULARJS',
+         skills: 'HTML, SCSS, JAVASCRIPT, ANGULAR',
          url: 'http://nick-sam.com/peopleList/',
          image: 'assets/screenshot_of_peoplelist.png'
 

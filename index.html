@@ -84,10 +84,13 @@
              work-block-hover>
             <div class="work-block">
                <div class="container">
-                  <h2 ng-bind=experience.header></h2>
-                  <p ng-bind=experience.brief></p>
-                  <p ng-bind=experience.skills></p>
-                  <a ng-href={{experience.url}} ng-bind=experience.url target='_blank'></a>
+                  <div class="cont">
+                     <a ng-href={{experience.url}} target='_blank'>
+                        <h2 class='work-name' ng-bind=experience.header></h2>
+                        <p class='work-brief' ng-bind=experience.brief></p>
+                        <p class='work-skills' ng-bind=experience.skills></p>
+                     </a>
+                  </div>
                </div>
             </div>
          </li>

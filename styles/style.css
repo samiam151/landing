@@ -6,11 +6,7 @@
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased; }
 
-html {
-  background-color: #763432; }
-
 body {
-  background-color: #763432;
   color: white; }
 
 h2 {
@@ -50,6 +46,9 @@ a {
     font-size: 7em;
     line-height: 0.95em;
     letter-spacing: 3px; }
+  .home .home-cont .home-job {
+    margin-top: 0.5%;
+    font-size: 1.9em; }
   .home .home-cont .home-rest, .home .home-cont .home-contact {
     width: 60%;
     margin-top: 3%;
@@ -94,9 +93,30 @@ a {
 .work {
   border-top: 3px solid black; }
   .work .work-block {
-    padding: 2.5% 0; }
+    padding: 3.5% 0; }
+    .work .work-block .cont {
+      position: relative;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      padding: 2%;
+      width: 55%;
+      border-radius: 5px; }
+    .work .work-block .work-name {
+      font-size: 3em; }
+    .work .work-block .work-brief {
+      margin-top: 0.6%;
+      font-size: 1.5em; }
+    .work .work-block .work-skills {
+      margin-top: 1%;
+      font-size: 1em; }
 
 pie-chart {
   margin-right: 200px; }
+
+.blue {
+  background-color: #1a2e4f; }
+
+.darken {
+  background-color: #172a47; }
 
 /*# sourceMappingURL=style.css.map */
