@@ -74,7 +74,6 @@ a {
         background-color: #b85956; }
 
 .about {
-  border-top: 3px solid black;
   background-color: white;
   color: #000; }
   .about .aboutCont {
@@ -90,25 +89,23 @@ a {
       vertical-align: top;
       padding-right: 2%; }
 
-.work {
-  border-top: 3px solid black; }
-  .work .work-block {
-    padding: 3.5% 0; }
-    .work .work-block .cont {
-      position: relative;
-      -webkit-transition: all 0.25s ease-in-out;
-      transition: all 0.25s ease-in-out;
-      padding: 2%;
-      width: 55%;
-      border-radius: 5px; }
-    .work .work-block .work-name {
-      font-size: 3em; }
-    .work .work-block .work-brief {
-      margin-top: 0.6%;
-      font-size: 1.5em; }
-    .work .work-block .work-skills {
-      margin-top: 1%;
-      font-size: 1em; }
+.work .work-block {
+  padding: 3.5% 0; }
+  .work .work-block .cont {
+    position: relative;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    padding: 2%;
+    width: 55%;
+    border-radius: 5px; }
+  .work .work-block .work-name {
+    font-size: 3em; }
+  .work .work-block .work-brief {
+    margin-top: 0.6%;
+    font-size: 1.5em; }
+  .work .work-block .work-skills {
+    margin-top: 1%;
+    font-size: 1em; }
 
 pie-chart {
   margin-right: 200px; }

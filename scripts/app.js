@@ -6,22 +6,18 @@ app
    return function(scope, element){
       var el = element,
          cont = $(el).children().children().children('.cont');
-      // var originalBackgroundColor = el.css('background-color'),
-      //    originalColor = el.css('color');
       el.addClass('blue');
 
       el.bind('mouseenter', function(){
          var image = $(this).data('image');
          el.css('background-image', 'url(' + image + ')');
          el.addClass('darken');
-         cont.css('left', '30px');
          cont.addClass('blue');
       });
 
        el.bind('mouseleave', function(){
          el.css('background-image', 'none');
          el.removeClass('darken');
-         cont.css('left', '0px');
          cont.removeClass('blue');
       });
 
@@ -95,7 +91,6 @@ app
 /** SERVICES **/
 app
 .service('experiences', function(){
-   var that = this;
    this.toString = 'The name of this service is "experiences".';
    this.works = [
       {
@@ -129,11 +124,6 @@ app
          url: 'http://nick-sam.com/aqua/',
          image: 'assets/screenshot_of_nova_energy.png'
 
-      }
-
-   ]; // header, brief, skills, url, image
-   this.worksLength = (function(){
-      return that.works.length;
-   }());
+      }]; // header, brief, skills, url, image
 })
 ;

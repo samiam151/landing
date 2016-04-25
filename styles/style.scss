@@ -27,14 +27,7 @@ $transparent: rgba(255,180,180,0.2);
 
 }
 
-html {
-   // background-color: #000;
-   // background-color: $red;
-}
-
 body {
-   // overflow: hidden;
-   // background-color: $red;
    color: white;
 }
 
@@ -58,15 +51,8 @@ a {
    }
 }
 
-section {
-   // border: 15px solid black;
-}
-
 .picture {
-   // background-image: url('../assets/ns_bg_trans.jpg');
    background-image: url('../assets/ns_bg_web.jpg');
-
-   // background-size: 100%;
    background-size: cover;
    background-repeat: no-repeat;
    display: fixed;
@@ -87,10 +73,7 @@ section {
 // Heading
 .home {
    @include bold;
-   // color: black;
    color: white;
-   // background-color: rgba(200,126,123,0.4);
-   // background-color: rgba(0,0,0,0.1);
    background: linear-gradient(90deg, $black_transparent, $black_transparent 38%, $transparent);
 
    .home-cont {
@@ -103,7 +86,6 @@ section {
       .home-job {
          margin-top: 0.5%;
          font-size: 1.9em;
-         // color: $blue;
       }
       .home-rest {
          width: 60%;
@@ -138,7 +120,6 @@ section {
       }
       .home-contact {
          @extend .home-rest;
-         // margin-top: 3%;
       }
    }
    
@@ -146,9 +127,8 @@ section {
 
 // About Me
 .about {
-   border-top: 3px solid black;
+   // border-top: 3px solid black;
    background-color: white;
-   // color: $red;
    color: #000;
 
    .aboutCont{
@@ -156,7 +136,6 @@ section {
 
       .bio {
          width: 70%;
-         // display: inline-block;
          font-size: 2em;
          margin-bottom: 3%;
          line-height: 1.5em;
@@ -171,7 +150,7 @@ section {
 }
 
 .work {
-   border-top: 3px solid black;
+   // border-top: 3px solid black;
    .work-block {
       padding: 3.5% 0;
       
