@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html ng-app='app'>
+<html>
 <head>
    <meta charset="utf8">
    <title>Landing</title>
    <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
    <link rel="stylesheet" href="styles/style.css">
-   
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script> -->
-   <!-- <script type='text/javascript' src='scripts/libs/angular-ui-router.js'></script> -->
 </head>
 
-<body>
+<body ng-app='app'>
 
    <!-- Header -->
    <div class="picture">
@@ -19,61 +16,16 @@
             <div class="home-cont">
                <p class='home-name'><br>Nicolas Sam.</p>
                <p class='home-rest'>I make front end interfaces, data visualizations, and other niceties. Check out my work below.</p>
-               <p class='home-rest'></p>
-               <p class='home-contact'>Feel free to contact me.</p>
                
-               <div class="home-buttons">
-                  <a href="mailto:nick@nick-sam.com">Talk To Me!</a>
-                  <a href="https://github.com/samiam151">Check Out Github</a>
-               </div>
-               <!-- <p class='home-love'>And I love doing it.</p> -->
+               <!-- Call to Action -->
+               <p class="home-action">
+                  <a href="mailto:nick@nick-sam.com" target='_blank'>Talk to me</a>, or 
+                  <a href="https://github.com/samiam151" target='_blank'>check it out the Github.</a>
+               </p>
             </div>
          </div>
       </section>
    </div>
-
-   <!-- About Section-->
-   <section ng-controller='AboutCtrl as about' class="about">
-      <div class="container">
-         
-         <!-- Little about me -->
-         <div class="aboutCont">
-            <div class="bio">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum illo eius suscipit, repellat ad. Voluptatum magni fuga quo illo dolorem ipsa, similique asperiores dolor ex et quod libero dolore accusantium?</p>
-            </div>
-
-            <!-- Skills -->
-            <div class='skills part'>
-               <h3>Skills</h3>
-               <ul>
-                  <li ng-repeat='skill in about.skills'>
-                     <p ng-bind=skill></p>
-                  </li>
-               </ul>
-            </div>
-
-            <!-- Affiliations -->
-            <div class="clubs part">
-               <h3>Affiliations</h3>
-               <ul>
-                  <li ng-repeat='club in about.clubs'>
-                     <p ng-bind=club></p>
-                  </li>
-               </ul>
-            </div>
-
-            <!-- Charts -->
-            <!-- <div ng-controller='PieCtrl as pie'>
-               <pie-chart piedata={{pie.data}}></pie-chart>
-               <pie-chart piedata={{pie.data}}></pie-chart>
-               <pie-chart piedata={{pie.data}}></pie-chart>
-            </div> -->
-         </div>
-
-         
-
-      </div>
-   </section>
 
    <!-- Work / Experience Section -->
    <section ng-controller='WorkCtrl as work' class="work"> 
@@ -83,19 +35,63 @@
              data-length={{experience.worksLength()}} 
              work-block-hover>
             <div class="work-block">
-               <div class="container">
-                  <div class="cont">
-                     <a ng-href={{experience.url}} target='_blank'>
+               <a ng-href={{experience.url}} target='_blank'>
+                  <div class="container">
+                     <div class="cont">
                         <h2 class='work-name' ng-bind=experience.header></h2>
                         <p class='work-brief' ng-bind=experience.brief></p>
                         <p class='work-skills' ng-bind=experience.skills></p>
-                     </a>
+                     </div>
                   </div>
-               </div>
+               </a>
             </div>
          </li>
       </ul>
    </section>
+
+   <!-- About Section-->
+   <section ng-controller='AboutCtrl as about' class="about">
+      <div class="container">
+         
+         <!-- Little about me -->
+         <div class="aboutCont">
+            <div class="bio">
+               <p>I am a entrepreneur-turned-carpenter-turned-front-end-developer, living in Alexandria, VA.</p>
+
+               
+            </div>
+            
+            <div class="skillsClubsCont">
+               <!-- Skills -->
+               <div class='skills'>
+                  <h3>Skills</h3>
+                  <ul>
+                     <li ng-repeat='skill in about.skills'>
+                        <p ng-bind=skill></p>
+                     </li>
+                  </ul>
+               </div>
+
+               <!-- Affiliations -->
+               <div class="clubs">
+                  <h3>Affiliations</h3>
+                  <ul>
+                     <li ng-repeat='club in about.clubs'>
+                        <a ng-href={{club.url}} target='_blank'>
+                           <p ng-bind=club.name></p>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+
+         
+
+      </div>
+   </section>
+
+   <footer><p class='container'>Nicolas Sam. 2016.</p></footer>
     
    <!-- scripts -->
    <script type='text/javascript' src="scripts/libs/jquery-1.12.3.min.js"></script>

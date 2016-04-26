@@ -1,10 +1,12 @@
 // Variables and Mixins
 $green: #3f7150;
 $red: #763432;//#843a38;//#772522;
-$blue: rgba(26,46, 79, 1);
+$blue: rgba(29,60, 88, 1);//R: 3 G: 46 B: 88 //R: 29 G: 60 B: 88
 $dark_green: #012607;
-$black_transparent: rgba(50,0,0,0.5);
+$black_transparent: rgba(50,0,0,0.4);
 $transparent: rgba(255,180,180,0.2);
+$white: #fff6f4;//#fff8f6;//#fdfdff;
+$black: #2a2a2a;
 
 @mixin bold {
    font-weight: 700;
@@ -28,7 +30,7 @@ $transparent: rgba(255,180,180,0.2);
 }
 
 body {
-   color: white;
+   color: $white;
 }
 
 h2 {
@@ -41,18 +43,19 @@ h3 {
 
 a {
    text-decoration: none;
-   color: white;
+   color: $white;
 
    &:visited {
-      color: white;
+      color: $white;
    }
    &:hover {
-      color: white;
+      color: $white;
    }
 }
 
 .picture {
-   background-image: url('../assets/ns_bg_web.jpg');
+   // background-image: url('../assets/ns_bg_web.jpg');
+   background-image: url('../assets/ns_bg.jpg');
    background-size: cover;
    background-repeat: no-repeat;
    display: fixed;
@@ -65,7 +68,7 @@ a {
 
 
 .section-title {
-   color: white;
+   color: $white;
    font-weight: 700;
    font-size: 5em;
 }
@@ -73,11 +76,10 @@ a {
 // Heading
 .home {
    @include bold;
-   color: white;
    background: linear-gradient(90deg, $black_transparent, $black_transparent 38%, $transparent);
 
    .home-cont {
-
+   
       .home-name {
          font-size: 7em;
          line-height: 0.95em;
@@ -106,7 +108,7 @@ a {
          
          a {
             background-color: rbga(0,0,0,0);
-            border: 3px solid white;
+            border: 3px solid $white;
             border-radius: 20px;
             padding: 4px 15px;
             margin-right: 2%;
@@ -118,6 +120,24 @@ a {
             }
          }
       }
+      
+      .home-action {
+         // @extend .home-rest;
+         font-size: 1.7em;
+         margin-top: 4.4%;
+
+         a {
+            color: $white;
+
+            &:hover {
+               // color: $blue;
+               border-bottom: 3px solid $white;
+               transition: all 0.1s linear;
+               // font-style: italic;
+            }
+         }
+      }
+
       .home-contact {
          @extend .home-rest;
       }
@@ -128,29 +148,55 @@ a {
 // About Me
 .about {
    // border-top: 3px solid black;
-   background-color: white;
-   color: #000;
+   border-top: 22px solid $black;
+
+
+   background-color: $white;
+   // color: #000;
+   color: $blue;
 
    .aboutCont{
-      padding: 12% 0;
+      // padding: 12% 0;
+      padding: 20% 0;
+   
+      li {
+         vertical-align: top;
+      }
+      a {
+         color: $blue;
 
+         &:hover {
+            color: lighten($blue, 20%);
+         }
+      }
+      
       .bio {
-         width: 70%;
+         width: 65%;
          font-size: 2em;
          margin-bottom: 3%;
          line-height: 1.5em;
-      }
-      .part {
          display: inline-block;
-         width: 30%;
-         vertical-align: top;
-         padding-right: 2%;
+         margin-right: 9%;
+      }
+      // .part {
+      //    display: inline-block;
+      //    width: 30%;
+      //    vertical-align: top;
+      //    padding-right: 2%;
+      // }
+
+      .skillsClubsCont{
+         display: inline-block;
+         width: 15%;
+         padding: 0 4%;
+         vertical-align: top; 
+         border-left: 5px double $blue;
       }
    }   
 }
 
 .work {
-   // border-top: 3px solid black;
+   border-top: 22px solid $black;
    .work-block {
       padding: 3.5% 0;
       
@@ -186,3 +232,23 @@ pie-chart {
 .darken {
    background-color: darken($blue, 2%)
 }
+
+
+// FOOTER
+footer {
+   // height: 40px;
+   // background-color: $blue;
+   background-color: $black;
+   // background-color: $red;
+   text-align: center;
+
+   p {
+      @include bold;
+      padding: 2% 0;
+      color: $white;
+      letter-spacing: 2.5px;
+   }
+}
+
+
+

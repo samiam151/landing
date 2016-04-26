@@ -5,7 +5,7 @@ app
 .directive('workBlockHover', function(){
    return function(scope, element){
       var el = element,
-         cont = $(el).children().children().children('.cont');
+         cont = $(el).children().children().children().children('.cont');
       el.addClass('blue');
 
       el.bind('mouseenter', function(){
@@ -73,9 +73,9 @@ app
       'Python'
    ];
    this.clubs = [
-      'Code for DC',
-      'Data Visualization DC',
-      'AngularJS DC'
+      {name: 'Code For DC', url: 'http://codefordc.org/'},
+      {name: 'Data Visualization DC', url: 'http://www.meetup.com/data-visualization-dc/'},
+      {name: 'AngularJS DC', url: 'http://www.meetup.com/AngularJS-DC/'}
    ];
 })
 .controller('WorkCtrl', ['experiences', function(experiences){
@@ -111,7 +111,7 @@ app
       },
       {
          header: 'Dinner List',
-         brief: 'Angular Someting',
+         brief: 'Angular Applet',
          skills: 'HTML, SCSS, JAVASCRIPT, ANGULAR',
          url: 'http://nick-sam.com/peopleList/',
          image: 'assets/screenshot_of_peoplelist.png'
