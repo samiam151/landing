@@ -1,0 +1,56 @@
+@media (max-width: 600px) {
+    * {
+        width: none;
+    }
+    
+    // Home
+    .home .home-cont .home-rest {
+        width: initial;
+    }
+    .home {
+        font-size: 0.5em;
+        text-align: center;
+    }
+
+    // About
+    .about, .work {
+        text-align: center;
+    }
+    .about {
+        font-size: 0.7em;
+        
+        .aboutCont {
+
+            .bio {
+                width: initial;
+            }
+
+            .skillsClubsCont {
+                width: initial;
+                border: none;
+                padding: 0;
+                width: 80%;
+
+                li {
+                    font-size: 1.3em;
+                }
+            }
+        }
+        
+    }
+    
+    // Work
+    .work .work-block .cont {
+        width: initial;
+    }
+    .work {
+        font-size: 0.8em;
+    }
+
+    // Contact
+    .contact {
+        font-size: 0.6em;
+    }
+
+
+}
