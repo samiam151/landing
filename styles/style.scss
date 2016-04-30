@@ -5,9 +5,12 @@ $blue: rgba(29,60, 88, 1);//R: 3 G: 46 B: 88 //R: 29 G: 60 B: 88
 $dark_green: #012607;
 $black_transparent: rgba(50,0,0,0.4);
 $transparent: rgba(255,180,180,0.2);
-$white: #fff6f4;//#fff8f6;//#fdfdff;
+$white: white;//#fff6f4;//#fff8f6;//#fdfdff;
 $black: #2a2a2a;
 
+@mixin italic {
+   font-style: italic;
+}
 @mixin bold {
    font-weight: 700;
 }
@@ -16,6 +19,10 @@ $black: #2a2a2a;
 }
 @mixin move-left {
    margin-left: -70px;
+}
+@mixin hover-underline {
+   border-bottom: 3px solid $white;
+   transition: all 0.1s linear;
 }
 
 // GLOBAL
@@ -26,7 +33,6 @@ $black: #2a2a2a;
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
    font-smoothing: antialiased;
-
 }
 
 body {
@@ -54,7 +60,6 @@ a {
 }
 
 .picture {
-   // background-image: url('../assets/ns_bg_web.jpg');
    background-image: url('../assets/ns_bg.jpg');
    background-size: cover;
    background-repeat: no-repeat;
@@ -62,7 +67,7 @@ a {
 }
 
 .container {
-   width: 85%;
+   width: 83%;
    margin: 0 auto;
 }
 
@@ -77,6 +82,8 @@ a {
 .home {
    @include bold;
    background: linear-gradient(90deg, $black_transparent, $black_transparent 38%, $transparent);
+
+   padding: 1% 0 16% 0;
 
    .home-cont {
    
@@ -115,14 +122,12 @@ a {
 
             &:hover {
                color: #000;
-               transition: background-color 0.1s ease;
-               background-color: lighten($red, 20%);
+               @include hover-underline;
             }
          }
       }
       
       .home-action {
-         // @extend .home-rest;
          font-size: 1.7em;
          margin-top: 4.4%;
 
@@ -130,10 +135,8 @@ a {
             color: $white;
 
             &:hover {
-               // color: $blue;
                border-bottom: 3px solid $white;
                transition: all 0.1s linear;
-               // font-style: italic;
             }
          }
       }
@@ -147,17 +150,14 @@ a {
 
 // About Me
 .about {
-   // border-top: 3px solid black;
    border-top: 22px solid $black;
-
+   border-bottom: 22px solid $black;
 
    background-color: $white;
-   // color: #000;
    color: $blue;
 
    .aboutCont{
-      // padding: 12% 0;
-      padding: 20% 0;
+      padding: 15% 0;
    
       li {
          vertical-align: top;
@@ -169,28 +169,55 @@ a {
             color: lighten($blue, 20%);
          }
       }
-      
+      div {
+         padding: 2% 0%;
+      }
       .bio {
          width: 65%;
          font-size: 2em;
          margin-bottom: 3%;
          line-height: 1.5em;
          display: inline-block;
-         margin-right: 9%;
+         margin-right: 7%;
+
+         p {
+            margin-bottom: 5%;
+            font-size: 0.75em;
+            font-weight: 500;
+         }
+
+         a {
+            @include italic;
+         }
       }
-      // .part {
-      //    display: inline-block;
-      //    width: 30%;
-      //    vertical-align: top;
-      //    padding-right: 2%;
-      // }
+
+
 
       .skillsClubsCont{
          display: inline-block;
-         width: 15%;
-         padding: 0 4%;
+         width: 20%;
+         padding-left: 7%;
          vertical-align: top; 
          border-left: 5px double $blue;
+         
+         .skills {
+            .learning {
+               padding-top: 5%;
+            }
+      
+            .skillsTitle {
+               padding-bottom: 3%;
+            }
+         }
+         
+      }
+
+      .aboutList {
+         margin-bottom: 7%;
+
+         p {
+            margin-bottom: 5%;
+         }
       }
    }   
 }
@@ -198,7 +225,7 @@ a {
 .work {
    border-top: 22px solid $black;
    .work-block {
-      padding: 3.5% 0;
+      padding: 2.5% 0;
       
       .cont {
          position: relative;
@@ -222,6 +249,28 @@ a {
    }
 }
 
+// Contact Section
+.contact {
+   background-color: $red;
+   color: $white;
+   padding: 9% 0;
+
+
+   .contact-left {
+      width: 65%;
+      margin: 0 auto;
+      font-size: 1.3em;
+      line-height: 3em;
+      text-align: center;
+
+      a {
+         &:hover {
+            @include hover-underline;
+         }
+      }
+   }
+}
+
 pie-chart {
    margin-right: 200px;
 }
@@ -232,14 +281,14 @@ pie-chart {
 .darken {
    background-color: darken($blue, 2%)
 }
+.toWhite {
+   color: $white;
+}
 
 
 // FOOTER
 footer {
-   // height: 40px;
-   // background-color: $blue;
    background-color: $black;
-   // background-color: $red;
    text-align: center;
 
    p {

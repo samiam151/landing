@@ -7,7 +7,7 @@
   font-smoothing: antialiased; }
 
 body {
-  color: #fff6f4; }
+  color: white; }
 
 h2 {
   font-size: 2em; }
@@ -17,11 +17,11 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #fff6f4; }
+  color: white; }
   a:visited {
-    color: #fff6f4; }
+    color: white; }
   a:hover {
-    color: #fff6f4; }
+    color: white; }
 
 .picture {
   background-image: url("../assets/ns_bg.jpg");
@@ -30,17 +30,18 @@ a {
   display: fixed; }
 
 .container {
-  width: 85%;
+  width: 83%;
   margin: 0 auto; }
 
 .section-title {
-  color: #fff6f4;
+  color: white;
   font-weight: 700;
   font-size: 5em; }
 
 .home {
   font-weight: 700;
-  background: linear-gradient(90deg, rgba(50, 0, 0, 0.4), rgba(50, 0, 0, 0.4) 38%, rgba(255, 180, 180, 0.2)); }
+  background: linear-gradient(90deg, rgba(50, 0, 0, 0.4), rgba(50, 0, 0, 0.4) 38%, rgba(255, 180, 180, 0.2));
+  padding: 1% 0 16% 0; }
   .home .home-cont .home-name {
     font-size: 7em;
     line-height: 0.95em;
@@ -63,53 +64,70 @@ a {
     margin-top: 3%; }
     .home .home-cont .home-buttons a {
       background-color: rbga(0, 0, 0, 0);
-      border: 3px solid #fff6f4;
+      border: 3px solid white;
       border-radius: 20px;
       padding: 4px 15px;
       margin-right: 2%; }
       .home .home-cont .home-buttons a:hover {
         color: #000;
-        transition: background-color 0.1s ease;
-        background-color: #b85956; }
+        border-bottom: 3px solid white;
+        transition: all 0.1s linear; }
   .home .home-cont .home-action {
     font-size: 1.7em;
     margin-top: 4.4%; }
     .home .home-cont .home-action a {
-      color: #fff6f4; }
+      color: white; }
       .home .home-cont .home-action a:hover {
-        border-bottom: 3px solid #fff6f4;
+        border-bottom: 3px solid white;
         transition: all 0.1s linear; }
 
 .about {
   border-top: 22px solid #2a2a2a;
-  background-color: #fff6f4;
+  border-bottom: 22px solid #2a2a2a;
+  background-color: white;
   color: #1d3c58; }
   .about .aboutCont {
-    padding: 20% 0; }
+    padding: 15% 0; }
     .about .aboutCont li {
       vertical-align: top; }
     .about .aboutCont a {
       color: #1d3c58; }
       .about .aboutCont a:hover {
         color: #3670a5; }
+    .about .aboutCont div {
+      padding: 2% 0%; }
     .about .aboutCont .bio {
       width: 65%;
       font-size: 2em;
       margin-bottom: 3%;
       line-height: 1.5em;
       display: inline-block;
-      margin-right: 9%; }
+      margin-right: 7%; }
+      .about .aboutCont .bio p {
+        margin-bottom: 5%;
+        font-size: 0.75em;
+        font-weight: 500; }
+      .about .aboutCont .bio a {
+        font-style: italic; }
     .about .aboutCont .skillsClubsCont {
       display: inline-block;
-      width: 15%;
-      padding: 0 4%;
+      width: 20%;
+      padding-left: 7%;
       vertical-align: top;
       border-left: 5px double #1d3c58; }
+      .about .aboutCont .skillsClubsCont .skills .learning {
+        padding-top: 5%; }
+      .about .aboutCont .skillsClubsCont .skills .skillsTitle {
+        padding-bottom: 3%; }
+    .about .aboutCont .aboutList {
+      margin-bottom: 7%; }
+      .about .aboutCont .aboutList p {
+        margin-bottom: 5%; }
 
 .work {
   border-top: 22px solid #2a2a2a; }
   .work .work-block {
-    padding: 3.5% 0; }
+    padding: 2.5% 0; }
     .work .work-block .cont {
       position: relative;
       -webkit-transition: all 0.25s ease-in-out;
@@ -126,6 +144,20 @@ a {
       margin-top: 1%;
       font-size: 1em; }
 
+.contact {
+  background-color: #763432;
+  color: white;
+  padding: 9% 0; }
+  .contact .contact-left {
+    width: 65%;
+    margin: 0 auto;
+    font-size: 1.3em;
+    line-height: 3em;
+    text-align: center; }
+    .contact .contact-left a:hover {
+      border-bottom: 3px solid white;
+      transition: all 0.1s linear; }
+
 pie-chart {
   margin-right: 200px; }
 
@@ -135,13 +167,16 @@ pie-chart {
 .darken {
   background-color: #1a3750; }
 
+.toWhite {
+  color: white; }
+
 footer {
   background-color: #2a2a2a;
   text-align: center; }
   footer p {
     font-weight: 700;
     padding: 2% 0;
-    color: #fff6f4;
+    color: white;
     letter-spacing: 2.5px; }
 
 /*# sourceMappingURL=style.css.map */
