@@ -76,7 +76,7 @@ app
       'Git',
       'Python'
    ];
-   
+
    this.newSkills = [
       'ES6 with Babel',
       'React'
@@ -107,7 +107,8 @@ app
          header: 'Interactive Bubble Chart',
          brief: 'Data Visualization',
          skills: 'HTML, SCSS, JQUERY, D3, PYTHON',
-         url: 'http://forgenerationstocome.org/#/bubble-chart',
+         // url: 'http://forgenerationstocome.org/#/bubble-chart',
+         url: 'http://nick-sam.com/_hold/bubble',
          image: 'assets/screenshot_of_bubble_graph.png'
 
       },

@@ -1,8 +1,10 @@
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     * {
         width: none;
     }
-    
+    .picture {
+        background-image: url('../assets/ns_bg_web.jpg');
+    }
     // Home
     .home .home-cont .home-rest {
         width: initial;
