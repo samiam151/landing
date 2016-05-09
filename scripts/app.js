@@ -26,60 +26,23 @@ app
 
    }
 })
-.directive('pieChart', function(){
-   return {
-      restrict: 'E',
-      replace: true,
-      // template: '<p>Hello!!!!!!!</p>',
-      // transclude: true,
-      // scope: {},
-      link: function(scope, el, attrs){
-         var height = 100, width = 100;
-         var svg = d3.select(el[0]).append('svg')
-            .attr('height', height)
-            .attr('width', width);
-
-         var circle = svg.selectAll('circle')
-            // need to fix data problem // pull from controller
-            .data([50])
-            .enter()
-            .append('circle')
-            .attr('r', function(d,i){
-               return d;
-            })
-            .attr('cx', function(d,index){
-               return index * 50 + d;
-            })
-            .attr('cy', '50')
-            .style('fill', 'red');
-         var innerCircle = svg.append('circle')
-            .attr('r', '30')
-            .attr('cy', (height / 2))
-            .attr('cx', (width / 2))
-            .attr('fill', 'white')
-            ;
-      }
-   };
-})
-;
 
 /** CONTROLLERS **/
 app
 .controller('AboutCtrl', function(){
    this.skills = [
+      'Javascript',
+      'D3 / Angular',
       'HTML / SVG', 
       'CSS / SASS',
       'Bootstrap', 
-      'Javascript',
-      'D3 / Angular',
       'jQuery / Underscore',
-      'Git',
-      'Python'
+      'Git Version Control'
    ];
 
    this.newSkills = [
-      'ES6 with Babel',
-      'React'
+      'Javascript ES2015',
+      'BDD / TDD with Mocha & Chai'
    ];
 
    this.clubs = [
