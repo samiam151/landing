@@ -25,12 +25,11 @@ a {
 
 .picture {
   background-image: url("../assets/ns_bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: fixed; }
+  background-size: 107%;
+  background-repeat: no-repeat; }
 
 .container {
-  width: 83%;
+  width: 82%;
   margin: 0 auto; }
 
 .section-title {
