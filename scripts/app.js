@@ -1,8 +1,7 @@
 var app = angular.module('app', []);
 
 /** DIRECTIVES **/
-app
-.directive('workBlockHover', function(){
+app.directive('workBlockHover', function(){
    return function(scope, element){
       var el = element,
          cont = $(el).children().children().children().children('.cont');
@@ -22,14 +21,11 @@ app
          cont.removeClass('blue');
          el.removeClass('toWhite');
       });
-
-
    }
 })
 
 /** CONTROLLERS **/
-app
-.controller('AboutCtrl', function(){
+app.controller('AboutCtrl', function(){
    this.skills = [
       'Javascript',
       'D3 / Angular',
@@ -62,16 +58,14 @@ app
 ;
 
 /** SERVICES **/
-app
-.service('experiences', function(){
+app.service('experiences', function(){
    this.toString = 'The name of this service is "experiences".';
    this.works = [
       {
          header: 'Interactive Bubble Chart',
          brief: 'Data Visualization',
          skills: 'HTML, SCSS, JQUERY, D3, PYTHON',
-         // url: 'http://forgenerationstocome.org/#/bubble-chart',
-         url: 'http://nick-sam.com/_hold/bubble',
+         url: 'http://forgenerationstocome.org/#/bubble-chart',
          image: 'assets/screenshot_of_bubble_graph.png'
 
       },

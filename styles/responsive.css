@@ -1,6 +1,7 @@
 @media (max-width: 700px) {
   * {
-    width: none; }
+    width: none;
+    text-align: center; }
 
   .picture {
     background-image: url("../assets/ns_bg_web.jpg"); }
@@ -18,7 +19,7 @@
   .about {
     font-size: 0.7em; }
     .about .aboutCont .bio {
-      width: initial; }
+      width: 100%; }
     .about .aboutCont .skillsClubsCont {
       width: initial;
       border: none;

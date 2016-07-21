@@ -1,6 +1,7 @@
 @media (max-width: 700px) {
     * {
         width: none;
+        text-align: center;
     }
     .picture {
         background-image: url('../assets/ns_bg_web.jpg');
@@ -24,7 +25,7 @@
         .aboutCont {
 
             .bio {
-                width: initial;
+                width: 100%;
             }
 
             .skillsClubsCont {
